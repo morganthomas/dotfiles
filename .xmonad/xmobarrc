@@ -6,21 +6,21 @@ Config {
                             , "--Low",      "50"
                             , "--High",     "85"
                             , "--low",      "lightgreen"
-                            , "--normal",   "lightorange"
-                            , "--high",     "lightred" ] 10
+                            , "--normal",   "orange"
+                            , "--high",     "red" ] 10
 
              , Run Memory  [ "--template", "Mem: <usedratio>%"
                            , "--High",     "80"
                            , "--low",      "lightgreen"
-                           , "--normal",   "lightorange"
-                           , "--high",     "lightred" ] 10
+                           , "--normal",   "orange"
+                           , "--high",     "red" ] 10
 
              , Run Swap   [ "--template", "Swp: <usedratio>%"
                           , "--Low",      "20"
                           , "--High",     "60"
                           , "--low",      "lightgreen"
-                          , "--normal",   "lightorange"
-                          , "--high",     "lightred" ] 10
+                          , "--normal",   "orange"
+                          , "--high",     "red" ] 10
 
              , Run DiskU  [ ("/", "/ <usedp>% used") ] [] 20
 

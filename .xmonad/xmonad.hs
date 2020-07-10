@@ -14,4 +14,5 @@ main = do
         { ppOutput = hPutStrLn xmproc
         , ppVisible = wrap "(" ")"
         }
+    , terminal = "tilix"
     }
