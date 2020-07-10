@@ -1,5 +1,5 @@
 Config {
-  template = "%cpu% | %memory% | %swap% | %disku% %diskio% | %dynnetwork% }{ %date% | %kbd% | %locks%",
+  template = "%cpu% | %memory% | %swap% | %disku% %diskio% | %dynnetwork% | %apricorn% }{ %date% | %kbd% | %locks%",
   sepChar = "%",
   alignSep = "}{",
   commands = [ Run Cpu      [ "--template", "Cpu: <total>%"
@@ -34,5 +34,7 @@ Config {
                            , ("us",         "US") ]
 
              , Run Locks
+
+             , Run CommandReader "/home/morgan/scripts/test-apricorn.sh" "apricorn"
              ]
 }
