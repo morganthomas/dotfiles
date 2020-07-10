@@ -1,32 +1,37 @@
 Config {
-  commands = [ Run MultiCpu [ "--template", "Cpu: <total 0>%|<total1>%"
+  template = "%cpu% | %memory% | %swap% | %disku% %diskio% | %dynnetwork% }{ %date% | %kbd% | %locks%",
+  sepChar = "%",
+  alignSep = "}{",
+  commands = [ Run Cpu      [ "--template", "Cpu: <total>%"
                             , "--Low",      "50"
                             , "--High",     "85"
-                            , "--low",      "darkgreen"
-                            , "--normal",   "darkorange"
-                            , "--high",     "darkred" ] 10
+                            , "--low",      "lightgreen"
+                            , "--normal",   "lightorange"
+                            , "--high",     "lightred" ] 10
 
              , Run Memory  [ "--template", "Mem: <usedratio>%"
                            , "--High",     "80"
-                           , "--low",      "darkgreen"
-                           , "--normal",   "darkorange"
-                           , "--high",     "darkred" ] 10
+                           , "--low",      "lightgreen"
+                           , "--normal",   "lightorange"
+                           , "--high",     "lightred" ] 10
 
              , Run Swap   [ "--template", "Swp: <usedratio>%"
                           , "--Low",      "20"
                           , "--High",     "60"
-                          , "--low",      "darkgreen"
-                          , "--normal",   "darkorange"
-                          , "--high",     "darkred" ] 10
+                          , "--low",      "lightgreen"
+                          , "--normal",   "lightorange"
+                          , "--high",     "lightred" ] 10
 
-             , Run DiskU  [ ("/", "<usedbar>") ] [] 10
+             , Run DiskU  [ ("/", "/ <usedp>% used") ] [] 20
 
-             , Run DiskIO [ ("/", "<read> <write>") ] [] 10
+             , Run DiskIO [ ("/", "R <read> W <write>") ] [] 10
 
-             , Run Date    "<fc=#ABABAB>%F (%a) %T</fc>" "date" 10
+             , Run DynNetwork [] 10
 
-             , Run Kbd     [ ("us(dvorak)", "<fc=#000088>DV</fc>")
-                           , ("us",         "<fc=#880000>US</fc>") ]
+             , Run Date    "%F (%a) %I%p" "date" 10
+
+	     , Run Kbd     [ ("us(dvorak)", "DV")
+                           , ("us",         "US") ]
 
              , Run Locks
              ]
