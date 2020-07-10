@@ -1,0 +1,7 @@
+[alias]
+	co = checkout
+	ci = commit
+	st = status
+[user]
+	email = morgan.a.s.thomas@gmail.com
+	name = Morgan Thomas
