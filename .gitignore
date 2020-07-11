@@ -19,3 +19,5 @@ Downloads
 .Xauthority
 .xsession-errors*
 *.swp
+.nix-defexpr
+.nix-profile
