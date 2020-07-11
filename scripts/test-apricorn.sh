@@ -2,7 +2,7 @@
 set +e
 while :
 do
-  if [ -e "/dev/disk/by-uuid/5645-D0FE" ] || [ -e "/dev/disk/by-label/kassir" ]
+  if [ -e "/dev/disk/by-uuid/C470-4BC9" ] || [ -e "/dev/disk/by-label/kassir" ]
   then
     echo "Apricorn mounted"
   else
