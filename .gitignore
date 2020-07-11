@@ -21,3 +21,5 @@ Downloads
 *.swp
 .nix-defexpr
 .nix-profile
+.cabal
+.ghc

@@ -5,3 +5,5 @@
 [user]
 	email = morgan.a.s.thomas@gmail.com
 	name = Morgan Thomas
+[core]
+	excludesfile = /home/morgan/.globalGitignore
