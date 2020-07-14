@@ -1,5 +1,5 @@
 Config {
-  template = "%cpu% | %memory% | %swap% | %disku% %diskio% | %dynnetwork% | %apricorn% }{ %uptime% | %date% | %battery% | %kbd% | %locks%",
+  template = "%cpu% | %coretemp% | %memory% | %swap% | %disku% %diskio% | %dynnetwork% | %wifi% | %apricorn% }{ %uptime% | %date% | %battery% | %kbd% | %locks%",
   sepChar = "%",
   alignSep = "}{",
   commands = [ Run Cpu      [ "--template", "Cpu: <total>%"
@@ -8,6 +8,9 @@ Config {
                             , "--low",      "lightgreen"
                             , "--normal",   "orange"
                             , "--high",     "red" ] 10
+
+             , Run CoreTemp [ "--template", "Temp:<core0>"
+                            , "-L", "40", "-H", "60", "-l", "lightblue", "-n", "gray90", "-h", "red"] 50
 
              , Run Memory  [ "--template", "Mem: <usedratio>%"
                            , "--High",     "80"
@@ -40,5 +43,7 @@ Config {
              , Run Battery [] 10
 
              , Run CommandReader "/home/morgan/scripts/test-apricorn.sh" "apricorn"
+
+             , Run CommandReader "/home/morgan/scripts/show-wifi.sh" "wifi"
              ]
 }
