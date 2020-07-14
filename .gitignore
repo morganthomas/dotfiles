@@ -23,3 +23,10 @@ Downloads
 .nix-profile
 .cabal
 .ghc
+.config/configstore
+.lesshst
+.npm
+.psql_history
+.vim
+.viminfz.tmp
+docs/
