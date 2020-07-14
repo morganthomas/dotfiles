@@ -1,5 +1,5 @@
 Config {
-  template = "%cpu% | %coretemp% | %memory% | %swap% | %disku% %diskio% | %dynnetwork% | %wifi% | %apricorn% }{ %uptime% | %date% | %battery% | %kbd% | %locks%",
+  template = "%cpu% | %coretemp% | %memory% | %swap% | %disku% %diskio% | %dynnetwork% | %wifi% | %apricorn% | %ssh% }{ %uptime% | %date% | %battery% | %kbd% | %locks%",
   sepChar = "%",
   alignSep = "}{",
   commands = [ Run Cpu      [ "--template", "Cpu: <total>%"
@@ -31,7 +31,7 @@ Config {
 
              , Run DynNetwork [] 10
 
-             , Run Date    "%F (%a) %I%p" "date" 10
+             , Run Date    "%F (%a) %I:%M%p" "date" 10
 
 	     , Run Kbd     [ ("us(dvorak)", "DV")
                            , ("us",         "US") ]
@@ -45,5 +45,7 @@ Config {
              , Run CommandReader "/home/morgan/scripts/test-apricorn.sh" "apricorn"
 
              , Run CommandReader "/home/morgan/scripts/show-wifi.sh" "wifi"
+
+             , Run CommandReader "/home/morgan/scripts/show-ssh.sh" "ssh"
              ]
 }
