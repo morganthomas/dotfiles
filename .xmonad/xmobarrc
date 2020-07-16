@@ -10,7 +10,7 @@ Config {
                             , "--high",     "red" ] 10
 
              , Run CoreTemp [ "--template", "Temp:<core0>"
-                            , "-L", "40", "-H", "60", "-l", "lightblue", "-n", "gray90", "-h", "red"] 50
+                            , "-L", "55", "-H", "75", "-l", "gray90", "-n", "orange", "-h", "red"] 50
 
              , Run Memory  [ "--template", "Mem: <usedratio>%"
                            , "--High",     "80"
@@ -40,7 +40,10 @@ Config {
 
              , Run Uptime [] 10
 
-             , Run Battery [] 10
+             , Run Battery [ "-t", "Batt: <watts>, <left>% / <timeleft>"
+                           , "-l", "red"
+                           , "-n", "orange"
+                           , "-h", "green" ] 10
 
              , Run CommandReader "/home/morgan/scripts/test-apricorn.sh" "apricorn"
 
