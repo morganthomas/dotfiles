@@ -10,4 +10,4 @@ export PATH=/usr/local/bin:$PATH
 alias nb=nix-build
 alias ns=nix-shell
 alias sa="ssh-add ~/.ssh/platonic"
-
+[ -e ~/.bashrc.private ] && source ~/.bashrc.private
