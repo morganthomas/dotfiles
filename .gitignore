@@ -19,6 +19,7 @@ Downloads
 .Xauthority
 .xsession-errors*
 *.swp
+*.swo
 .nix-defexpr
 .nix-profile
 .cabal
