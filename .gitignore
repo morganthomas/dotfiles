@@ -31,3 +31,7 @@ Downloads
 .vim
 .viminfz.tmp
 docs/
+screenshots/
+.weechat
+.stack/
+.bashrc.private
