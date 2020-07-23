@@ -2,6 +2,7 @@ import System.IO
 import XMonad
 import XMonad.Hooks.DynamicLog
 import XMonad.Hooks.ManageDocks
+import XMonad.Util.EZConfig (additionalKeys)
 import XMonad.Util.Run (spawnPipe)
 
 main = do
@@ -15,4 +16,6 @@ main = do
         , ppVisible = wrap "(" ")"
         }
     , terminal = "tilix"
-    }
+    } `additionalKeys`
+    [ ((modMask defaultConfig, xK_Print), spawn "scrot screenshots/screen_%Y-%m-%d-%H-%M-%S.png -d 1")
+    ]
