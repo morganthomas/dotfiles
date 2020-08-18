@@ -12,3 +12,4 @@ alias ns=nix-shell
 alias sa="ssh-add ~/.ssh/platonic"
 alias chrnosec="chromium --disable-web-security --user-data-dir=/home/morgan/.config/chromium-nosec"
 [ -e ~/.bashrc.private ] && source ~/.bashrc.private
+alias docker-clean="docker container prune && docker image prune -af"
