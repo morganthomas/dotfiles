@@ -7,6 +7,7 @@ export LD_LIBRARY_PATH=$GMP_PATH:$CURSES_PATH:$ZLIB_PATH:$LD_LIBRARY_PATH
 export LIBRARY_PATH=$GMP_PATH:$CURSES_PATH:$ZLIB_PATH:$LIBRARY_PATH
 export C_INCLUDE_PATH=$ZLIB_INCLUDE_PATH:$C_INCLUDE_PATH
 export PATH=/usr/local/bin:$PATH
+alias s11warp="ns -p haskellPackages.wai-app-static --command \"warp -d result/bin/snowman.jsexe -p 8080\""
 alias nb=nix-build
 alias ns=nix-shell
 alias sa="ssh-add ~/.ssh/platonic"
