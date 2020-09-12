@@ -14,3 +14,20 @@ alias sa="ssh-add ~/.ssh/platonic"
 alias chrnosec="chromium --disable-web-security --user-data-dir=/home/morgan/.config/chromium-nosec"
 [ -e ~/.bashrc.private ] && source ~/.bashrc.private
 alias docker-clean="docker container prune && docker image prune -af"
+alias qiime-activate="conda activate qiime2-2020.8"
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/morgan/.conda/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/morgan/.conda/etc/profile.d/conda.sh" ]; then
+        . "/home/morgan/.conda/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/morgan/.conda/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
