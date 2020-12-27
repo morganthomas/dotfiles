@@ -67,4 +67,3 @@ screenshots
 .config/configstore
 .xmonad/xmonad.o
 .psql_history
-.stack

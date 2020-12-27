@@ -8,7 +8,8 @@
 # See https://docs.haskellstack.org/en/stable/yaml_configuration/#templates
 ghc-build: standard
 nix:
-  enable: false
+  enable: true
+  packages: [zlib.dev, zlib.out]
 templates:
   params:
 #    author-name:
