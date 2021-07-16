@@ -16,6 +16,12 @@ main = do
         , ppVisible = wrap "(" ")"
         }
     , terminal = "tilix"
+    , startupHook = startup
     } `additionalKeys`
     [ ((modMask defaultConfig, xK_Print), spawn "scrot screenshots/screen_%Y-%m-%d-%H-%M-%S.png -d 1")
     ]
+
+
+startup :: X ()
+startup = do
+  spawn "xscreensaver -no-splash"
