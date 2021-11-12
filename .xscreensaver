@@ -1,11 +1,11 @@
 # XScreenSaver Preferences File
-# Written by xscreensaver-settings 6.00 for morgan on Fri Jul 16 11:31:49 2021.
+# Written by xscreensaver-settings 6.00 for morgan on Fri Nov  5 21:59:49 2021.
 # https://www.jwz.org/xscreensaver/
 
-timeout:	0:01:00
+timeout:	0:02:00
 cycle:		0:10:00
-lock:		True
-lockTimeout:	0:00:00
+lock:		False
+lockTimeout:	0:01:00
 passwdTimeout:	0:00:30
 visualID:	default
 installColormap:    True
@@ -19,7 +19,7 @@ unfade:		True
 fadeSeconds:	0:00:03
 ignoreUninstalledPrograms:False
 font:		
-dpmsEnabled:	False
+dpmsEnabled:	True
 dpmsQuickOff:	False
 dpmsStandby:	2:00:00
 dpmsSuspend:	2:00:00
@@ -30,7 +30,7 @@ chooseRandomImages: False
 imageDirectory:	
 
 mode:		one
-selected:	241
+selected:	41
 
 textMode:	file
 textLiteral:	XScreenSaver
