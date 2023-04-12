@@ -1,5 +1,5 @@
 Config {
-  template = "%cpu% | %coretemp% | %memory% | %swap% | %disku% %diskio% | %dynnetwork% | %wifi% | %StdinReader% }{ %uptime% | %date% | %battery% | %kbd% | %locks%",
+  template = "%cpu% | %coretemp% | %memory% | %swap% | %disku% %diskio% | %dynnetwork% | %wifi% }{ %uptime% | %date% | %battery% | %kbd% | %locks%",
   sepChar = "%",
   alignSep = "}{",
   commands = [ Run Cpu      [ "--template", "Cpu: <total>%"
@@ -46,7 +46,5 @@ Config {
                            , "-h", "green" ] 10
 
              , Run CommandReader "/home/morgan/scripts/show-wifi.sh" "wifi"
-
-             , Run StdinReader
              ]
 }
