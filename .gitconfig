@@ -7,3 +7,5 @@
 	name = Morgan Thomas
 [core]
 	excludesfile = /home/morgan/.globalGitignore
+[pull]
+	rebase = false
